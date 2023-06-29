@@ -1,0 +1,16 @@
+{
+"companyName": "PlantWatermelon",
+"productName": "PlantWatermelonTest",
+"productVersion": "0.1",
+"dataUrl": "Building.data.unityweb",
+"wasmCodeUrl": "Building.wasm.code.unityweb",
+"wasmFrameworkUrl": "Building.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.35f1c1"
+}
