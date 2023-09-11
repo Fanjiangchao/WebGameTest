@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | RpsIo</title>
+    <title>Unity WebGL Player | AddNum</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1080 height=1920></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">RpsIo</div>
+        <div id="unity-build-title">AddNum</div>
       </div>
     </div>
     <script>
@@ -56,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/RpsIoBuild.loader.js";
+      var loaderUrl = buildUrl + "/AddNumBuild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/RpsIoBuild.data.unityweb",
-        frameworkUrl: buildUrl + "/RpsIoBuild.framework.js.unityweb",
-        codeUrl: buildUrl + "/RpsIoBuild.wasm.unityweb",
+        dataUrl: buildUrl + "/AddNumBuild.data.unityweb",
+        frameworkUrl: buildUrl + "/AddNumBuild.framework.js.unityweb",
+        codeUrl: buildUrl + "/AddNumBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "RpsIo",
-        productVersion: "1.0",
+        companyName: "Fan",
+        productName: "AddNum",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
@@ -93,18 +93,16 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        // canvas.style.width = "960px";
-        // canvas.style.height = "600px";
-		var tempW= window.innerWidth;//获取body可见区域高度
-var tempH =  window.innerHeight;//获取body可见区域高度
-var scale = 1080/1920;
-var width = 0;
-var height = 0;
-if (tempW/tempH > scale) {height=tempH;width=tempH*scale;}
-if (tempW/tempH < scale) {height=tempW/scale;width=tempW;}
-
-canvas.style.width = width+"px";
-canvas.style.height = height+"px";
+        var tempW= window.innerWidth;//获取body可见区域高度
+		var tempH =  window.innerHeight;//获取body可见区域高度
+		var scale = 1080/1920;
+		var width = 0;
+		var height = 0;
+		if (tempW/tempH > scale) {height=tempH;width=tempH*scale;}
+		if (tempW/tempH < scale) {height=tempW/scale;width=tempW;}
+		
+		canvas.style.width = width+"px";
+		canvas.style.height = height+"px";
       }
 
       loadingBar.style.display = "block";
